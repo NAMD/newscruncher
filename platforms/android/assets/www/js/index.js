@@ -19,7 +19,9 @@
 var app = {
     // Application Constructor
     initialize: function () {
+        window.localStorage.nextpage="trends.html"
         this.bindEvents();
+
     },
     // Bind Event Listeners
     //
@@ -27,6 +29,8 @@ var app = {
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function () {
         document.addEventListener('deviceready', this.onDeviceReady, false);
+        $("#searchform").on("submit", this.sendQuery)
+        $(document).on("swipeleft", this.swipePage)
 
     },
     // deviceready Event Handler
@@ -39,6 +43,28 @@ var app = {
         app.receivedEvent('deviceready');
 
     },
+
+    //swipe to the next page
+    swipePage: function(){
+        $(".selector").pagecontainer("change", window.localStorage.nextpage,{
+            transition: "slide",
+            reverse: false,
+            changeHash: false
+        });
+    },
+
+    //load results page
+    sendQuery: function(){
+        window.localStorage.query = $("#searchbox").val()
+
+        $(".selector").pagecontainer("change", "trends.html",{
+            transition: "slide",
+            reverse: false,
+            changeHash: false
+        });
+
+    },
+
     // Update DOM on a Received Event
     receivedEvent: function (id) {
         var parentElement = document.getElementById(id);

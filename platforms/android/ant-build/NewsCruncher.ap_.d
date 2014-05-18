@@ -16,10 +16,12 @@
 /home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/index.html \
 /home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/plugins \
 /home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/css \
+/home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/trends.html \
 /home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/js \
 /home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/cordova_plugins.js \
 /home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/img \
 /home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/cordova.js \
+/home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/sentiment.html \
 /home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/css/graphics \
 /home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/css/highslide.css \
 /home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/css/index.css \
@@ -32,6 +34,7 @@
 /home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/js/highslide.config.js \
 /home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/js/modules \
 /home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/js/highcharts.js \
+/home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/js/jquery-2.1.1.min.js \
 /home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/js/highcharts-more.js \
 /home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/js/index.js \
 /home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/js/highslide-full.min.js \
