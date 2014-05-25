@@ -46,6 +46,13 @@ var app = {
     //load results page
     sendQuery: function(){
         window.localStorage.query = $("#searchbox").val()
+        draw_trends();
+        draw_sent();
+        $.mobile.pageContainer.pagecontainer("change", "#dashboard",
+            {transition:'none',
+             changeHash: false,
+             reload: false
+            });
     },
 
     // Update DOM on a Received Event

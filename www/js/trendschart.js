@@ -1,7 +1,8 @@
 /**
  * Created by fccoelho on 25/05/14.
  */
-$(function () {
+$(draw_trends());
+function draw_trends() {
         window.localStorage.nextpage = "sentiment.html"
         // Get the JSON and create the chart
         $.get('http://9003.hpc.pypln.org/articles/trends/?query=' + window.localStorage.query, function (trends) {
@@ -116,4 +117,4 @@ $(function () {
                 }
             });
         });
-    });
+    };

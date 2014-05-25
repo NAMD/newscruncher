@@ -1,7 +1,8 @@
 /**
  * Created by fccoelho on 25/05/14.
  */
- $(function () {
+$(draw_sent());
+function draw_sent() {
         window.localStorage.nextpage = "index.html"
         // Get the JSON and create the chart
 
@@ -113,4 +114,4 @@
             });
         });
 
-    });
+    };
