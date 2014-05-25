@@ -19,7 +19,6 @@
 var app = {
     // Application Constructor
     initialize: function () {
-        window.localStorage.nextpage="trends.html"
         this.bindEvents();
 
     },
@@ -30,7 +29,7 @@ var app = {
     bindEvents: function () {
         document.addEventListener('deviceready', this.onDeviceReady, false);
         $("#searchform").on("submit", this.sendQuery)
-        $(document).on("swipeleft", this.swipePage)
+
 
     },
     // deviceready Event Handler
@@ -38,35 +37,20 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function () {
-        // set your swipe threshold explicitly
-        $.event.special.swipe.horizontalDistanceThreshold = 120;
+
         app.receivedEvent('deviceready');
 
     },
 
-    //swipe to the next page
-    swipePage: function(){
-        $(".selector").pagecontainer("change", window.localStorage.nextpage,{
-            transition: "slide",
-            reverse: false,
-            changeHash: false
-        });
-    },
 
     //load results page
     sendQuery: function(){
         window.localStorage.query = $("#searchbox").val()
-
-        $(".selector").pagecontainer("change", "trends.html",{
-            transition: "slide",
-            reverse: false,
-            changeHash: false
-        });
-
     },
 
     // Update DOM on a Received Event
     receivedEvent: function (id) {
+
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');

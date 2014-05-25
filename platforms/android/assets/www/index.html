@@ -33,16 +33,106 @@
     <title>Hello World</title>
 </head>
 <body>
-<div class="app">
+<div data-role="page" id="home">
+<header data-role="header">
+    <h1>NewsCruncher</h1>
+</header>
 
-            <h1>News Cruncher</h1>
+<article class="app ui-content" role="main" data-role="content">
+
 
             <form role="form" id="searchform">
-                <input class="form-control" id="searchbox" placeholder="Search for something..."/>
+                <input class="form-control" id="searchbox" type="search" placeholder="Search for something..."/>
             </form>
 
 
-</div>
+</article>
+<footer data-role="footer" data-position="fixed">
+    <nav data-role="navbar">
+        <ul>
+            <li><a href="#home" data-icon="home">Search</a></li>
+            <li><a href="#dashboard" data-icon="grid">Dashboard</a></li>
+            <li><a href="#" data-icon="bars">Articles</a></li>
+            <li><a href="#" data-icon="bullets">Sources</a></li>
+        </ul>
+    </nav>
+</footer>
+</div> <!--page-->
+
+<div data-role="page" id="dashboard">
+<header data-role="header">
+    <h1>Dashboard</h1>
+    <a href="#home" data-icon="back">back</a>
+</header>
+
+<article class="ui-content" role="main" data-role="content">
+
+<div id="trends" style="width: 100%; height: 400px; margin: 0 auto"></div>
+
+
+<div id="sentiment" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+
+
+</article>
+<footer data-role="footer" data-position="fixed">
+    <nav data-role="navbar">
+        <ul>
+            <li><a href="#home" data-icon="home">Search</a></li>
+            <li><a href="#dashboard" data-icon="grid">Dashboard</a></li>
+            <li><a href="#articles" data-icon="bars">Articles</a></li>
+            <li><a href="#sources" data-icon="bullets">Sources</a></li>
+        </ul>
+    </nav>
+</footer>
+</div> <!--page-->
+
+<div data-role="page" id="articles">
+<header data-role="header">
+    <h1>Articles</h1>
+    <a href="#home" data-icon="back">Back</a>
+</header>
+
+<article class="ui-content" role="main" data-role="content">
+
+
+
+
+</article>
+<footer data-role="footer" data-position="fixed">
+    <nav data-role="navbar">
+        <ul>
+            <li><a href="#home" data-icon="home">Search</a></li>
+            <li><a href="#dashboard" data-icon="grid">Dashboard</a></li>
+            <li><a href="#articles" data-icon="bars">Articles</a></li>
+            <li><a href="#sources" data-icon="bullets">Sources</a></li>
+        </ul>
+    </nav>
+</footer>
+</div> <!--page-->
+
+<div data-role="page" id="sources">
+<header data-role="header">
+    <h1>Sources</h1>
+    <a href="#home" data-icon="back"></a>
+</header>
+
+<article class="ui-content" role="main" data-role="content">
+
+
+
+
+</article>
+<footer data-role="footer" data-position="fixed">
+    <nav data-role="navbar">
+        <ul>
+            <li><a href="#home" data-icon="home">Search</a></li>
+            <li><a href="#dashboard" data-icon="grid">Dashboard</a></li>
+            <li><a href="#articles" data-icon="bars">Articles</a></li>
+            <li><a href="#sources" data-icon="bullets">Sources</a></li>
+        </ul>
+    </nav>
+</footer>
+</div> <!--page-->
 
 <script type="text/javascript" src="cordova.js"></script>
 <script type="text/javascript" src="js/jquery-2.1.1.min.js"></script>
@@ -51,6 +141,9 @@
 <script type="text/javascript" src="js/index.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/trendschart.js"></script>
+<script type="text/javascript" src="js/sentchart.js"></script>
 
 <script type="text/javascript">
     app.initialize();

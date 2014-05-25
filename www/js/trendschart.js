@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html>
-
-<body>
-<div id="trends" style="width: 100%; height: 400px; margin: 0 auto"></div>
-
-<script type="application/javascript">
-    $(function () {
+/**
+ * Created by fccoelho on 25/05/14.
+ */
+$(function () {
         window.localStorage.nextpage = "sentiment.html"
         // Get the JSON and create the chart
         $.get('http://9003.hpc.pypln.org/articles/trends/?query=' + window.localStorage.query, function (trends) {
@@ -121,6 +117,3 @@
             });
         });
     });
-</script>
-</body>
-</html>

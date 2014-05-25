@@ -1,26 +1,23 @@
-<!DOCTYPE html>
-<html>
-
-<body>
-<div id="trends" style="width: 100%; height: 400px; margin: 0 auto"></div>
-
-<script type="application/javascript">
-    $(function () {
-        window.localStorage.nextpage = "sentiment.html"
+/**
+ * Created by fccoelho on 25/05/14.
+ */
+ $(function () {
+        window.localStorage.nextpage = "index.html"
         // Get the JSON and create the chart
-        $.get('http://9003.hpc.pypln.org/articles/trends/?query=' + window.localStorage.query, function (trends) {
 
-            $('#trends').highcharts({
+        $.get('http://9003.hpc.pypln.org?query=' + window.localStorage.query, function (dados) {
+            $('#sentiment').highcharts({
+
                 chart: {
-                    type: "scatter",
+                    type: "areaspline",
                     zoomType: "x"
                 },
                 data: {
-                    json: trends
+                    json: dados
                 },
 
                 title: {
-                    text: 'Artigos por dia para a consulta <b>' + window.localStorage.query + '</b>'
+                    text: 'Sentimento diário para a consulta: <b>' + window.localStorage.query + '</b>'
                 },
 
                 subtitle: {
@@ -65,7 +62,7 @@
                     crosshairs: [true, true],
                     formatter: function () {
                         return Highcharts.dateFormat('%A, %b %e, %Y', this.x) + ':<br/> ' +
-                                this.y + ' articles'
+                                'Sentiment: ' + this.y
                     }
 
                 },
@@ -81,10 +78,14 @@
                                             x: this.pageX,
                                             y: this.pageY
                                         },
-                                        headingText: this.series.name,
+                                        headingText: "Sentence Sentiment",
                                         maincontentText: Highcharts.dateFormat('%A, %b %e, %Y', this.x) + ':<br/> ' +
-                                                this.y + ' articles',
-                                        width: 200
+                                                'Average article Sentiment: ' + this.y + ':<br/> ' +
+                                                $.ajax({url: 'http://9003.hpc.pypln.org/sentsent?date=' +
+                                                        Highcharts.dateFormat('%m-%d-%Y', this.x) + '&word=' +
+                                                        window.localStorage.query, async: false }).responseText,
+                                        width: 600,
+                                        height: 600
                                     });
                                 }
                             }
@@ -97,22 +98,13 @@
 
                 series: [
                     {
-                        name: 'All Articles',
+                        name: 'Sentiment',
                         lineWidth: 0,
-                        type: "column",
+                        //type: "spline",
                         marker: {
                             radius: 4
                         },
-                        data: trends[0]
-                    },
-                    {
-                        name: 'MA',
-                        lineWidth: 2,
-                        type: "spline",
-                        marker: {
-                            radius: 0
-                        },
-                        data: trends[1]
+                        data: dados
                     }
                 ],
                 credits: {
@@ -120,7 +112,5 @@
                 }
             });
         });
+
     });
-</script>
-</body>
-</html>

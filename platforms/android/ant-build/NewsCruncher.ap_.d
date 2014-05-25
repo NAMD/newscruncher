@@ -34,7 +34,9 @@
 /home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/js/highslide.config.js \
 /home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/js/modules \
 /home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/js/highcharts.js \
+/home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/js/trendschart.js \
 /home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/js/jquery-2.1.1.min.js \
+/home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/js/sentchart.js \
 /home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/js/highcharts-more.js \
 /home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/js/index.js \
 /home/fccoelho/Documentos/Projects_Software/newscruncher/platforms/android/assets/www/js/highslide-full.min.js \
